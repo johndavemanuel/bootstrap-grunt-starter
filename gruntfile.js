@@ -14,8 +14,8 @@ module.exports = function(grunt) {
           sourceMap: true
         },
         files: {
-          'dist/css/style.css': [
-            'src/scss/style.scss',
+          'dist/css/main.css': [
+            'src/scss/main.scss',
             'src/scss/*/*.scss',
             'src/scss/*/*/*.scss',
             'src/scss/*/*/*/*.scss'
@@ -62,6 +62,13 @@ module.exports = function(grunt) {
           dest: 'dist/fonts',
           cwd: 'node_modules/bootstrap-sass/assets/fonts/',
         }]
+      },
+      jsvendor: {
+        files: [{
+          expand: false,
+          src: 'node_modules/jquery/dist/jquery.min.js',
+          dest:'dist/vendor/js/jquery.min.js',
+        }]
       }
     },
     htmlmin: {
@@ -103,12 +110,12 @@ module.exports = function(grunt) {
           base: 'dist',
           keepalive: false,
           livereload: true,
-          hostname: 'localhost'
+          hostname: 'localhost',
+          open: true
         }
       }
     }
   }); //initConfig
-  grunt.registerTask('default', ['connect:server', 'watch']);
-  grunt.registerTask('init', ['copy', 'concat', 'uglify', 'sass', 'cssmin', 'htmlmin']);
+  grunt.registerTask('init', ['copy', 'concat', 'sass', 'cssmin', 'htmlmin', 'connect:server', 'watch']);
   grunt.registerTask('build', ['concat', 'uglify', 'sass', 'cssmin', 'htmlmin']);
 };

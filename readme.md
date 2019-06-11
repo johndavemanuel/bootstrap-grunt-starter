@@ -1,12 +1,4 @@
-# Welcome to simple grunt starter.
-
-This is a Grunt starter kit / boilerplate with Bootstrap that I use for my own projects. If you have any requests or remarks please let me know 🙂
-
-## Release notes
-Version 1.4.0
-- Package update
-- Minor text fixes
-
+# Bootstrap Grunt Starter
 ## Features:
 - Compiles SCSS / SASS to one style.css file.
 - Also minifies that style.css to style.min.css. For use on your live websites.
@@ -33,7 +25,7 @@ If Node.js and Grunt are installed navigate to the destination folder using the 
 
 For example:
 ```bash
-cd C:\Development\GIT\simple-grunt-starter
+cd C:\Development\GIT\bootstrap-grunt-starter
 ```
 
 ### Development

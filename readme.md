@@ -43,11 +43,6 @@ Now that the required packages are installed run the following command to create
 grunt init
 ```
 
-Now to start making your changes run:
-```bash
-grunt
-```
-
 Every time you change a file the watch task will trigger and compile everything in the dist folder!
 
 ### Production
